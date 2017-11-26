@@ -1,0 +1,35 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+    font-size:9px;
+}
+/*
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+*/
+p {
+  font-family: arial, sans-serif;
+    font-size: 12px;
+}
+h1 {
+  font-family: arial, sans-serif;
+    font-size: 20px;
+}
+h2 {
+  font-family: arial, sans-serif;
+    font-size: 18px;
+}
+p.fourtabs {
+    tab-size:4;
+    -moz-tab-size: 4;
+    -o-tab-size:  4;
+  white-space: pre-wrap;
+}

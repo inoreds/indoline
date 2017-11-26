@@ -1,5 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+require_once 'vendor/autoload.php';
+
 class lprUmum extends CI_Controller {
 
 	function index()
@@ -162,11 +164,16 @@ class lprUmum extends CI_Controller {
     {
     		$this->load->model('/m_laporan');
             $html = $this->m_laporan->pdf_penjualanBBM();
-            $this->load->library("pdf");
-            $this->pdf->set_paper('legal', 'landscape');
-            $this->pdf->load_html($html);
-            $this->pdf->render();
-            $this->pdf->stream("laporan.pdf");
+        
+            $mpdf = new \Mpdf\Mpdf(['format' => 'Legal']);
+            $mpdf->AddPage('L');
+            $mpdf->WriteHTML($html);
+            $mpdf->Output("Laopran Penjualan BBM All.pdf", 'I');
+            // $this->load->library("pdf");
+            // $this->pdf->set_paper('legal', 'landscape');
+            // $this->pdf->load_html($html);
+            // $this->pdf->render();
+            // $this->pdf->stream("laporan.pdf");
     }
     function pdf_pembelianBBM()
     {

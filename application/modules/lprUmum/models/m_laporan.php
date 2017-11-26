@@ -420,10 +420,12 @@ class m_laporan extends CI_Model {
             h1 {
               font-family: arial, sans-serif;
                 font-size: 20px;
+                text-align: center;
             }
             h2 {
               font-family: arial, sans-serif;
                 font-size: 18px;
+                text-align: center;
             }
             p.fourtabs {
                 tab-size:4;
@@ -432,8 +434,8 @@ class m_laporan extends CI_Model {
               white-space: pre-wrap;
             }
             </style>
-            <h1><center>PT. INDOLINE INCOMEKITA<center></h1>
-            <h1><center>LAPORAN PENJUALAN<center></h1>
+            <h2>PT. INDOLINE INCOMEKITA</h1>
+            <h1>LAPORAN PENJUALAN</h1>
             <table>
               <thead>
                     <tr>
